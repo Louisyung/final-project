@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="啟銓的網站關於MLB數據資訊">
+    <meta name="author" content="啟銓">
+    <meta name="keywords" content="啟銓, html, mlb 搜尋">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>啟銓MLB球員數據搜尋網站</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Baseball Data Search</div>
+        <ul class="nav-links">
+            <li><a href="https://www.fangraphs.com/">Fangraphs網站</a></li>
+            <li><a href="page2.html">第二頁</a></li>
+            <li><a href="blog.html">My Blog</a></li>
+            <li><a href="lab2_sign_in.html">Sign in</a></li>
+            <li><a href="lab2_login.html">Log in</a></li>
+        </ul>
+    </nav>
+
+    <header class="search-header">
+        <div class="search_left">
+            <img src="image/baseball_reference.png" />
+            <span class="brand-name"><b>BASEBALL</b> REFERENCE</span>
+        </div>
+
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="輸入球員名稱..." oninput="showSuggestions()" onkeypress="handleKey(event)">
+            <div id="suggestions" class="suggestions-list"></div>
+            <button onclick="searchPlayer()">搜尋</button>
+        </div>
+    </header>
+    <section id="mlbNewsSection" style="margin-top: 40px;">
+        <h2>📢 最新MLB新聞</h2>
+        <div id="mlbNews" class="news-container"></div>
+    
+        <h2>🧢 新秀焦點</h2>
+        <div id="rookieNews" class="news-container"></div>
+    </section>
+    
+    
+    <script src="script.js"></script>
+</body>
+</html>
