@@ -181,7 +181,7 @@
       document.querySelectorAll('input[type="checkbox"]').forEach(cb => cb.checked = false);
     }
 
-    // 修改 generateScript 函數，彈出一個輸入視窗
+    // 修改 generateScript 函數，增加轉移到 scriptScreen.html 的功能
     function generateScript() {
       if (characters.length === 0) {
         alert("請先新增至少一個角色！");
@@ -198,6 +198,9 @@
       if (storyDirection) {
         alert(`劇情方向已設定：${storyDirection}\n角色數量：${characters.length}\n劇情類型：${selectedStoryType}`);
         // 在此處添加生成劇本的邏輯，使用 storyDirection
+
+        // 確定後轉移到 scriptScreen.html
+        window.location.href = "scriptScreen.html";
       } else {
         alert("未輸入劇情方向，請重新設定！");
       }
