@@ -41,6 +41,22 @@
 我們的目標是簡化劇本開發流程，讓創作者不需具備專業編劇或 prompt 設計知識，也能輕鬆打造高質感的原創劇情。
 
 ## 使用者介面
+>主畫面
+
+![image](https://github.com/user-attachments/assets/50fdc63f-6d14-42f0-b367-214e20fc11bb)
+>使用者可選擇推薦的劇情類型或者自行設定劇情類型
+
+![image](https://github.com/user-attachments/assets/9507e5bc-e224-4ffb-b084-473da841addf)
+>在設定玩劇情類型後會出現新增角色的按鈕
+
+![image](https://github.com/user-attachments/assets/fe744b25-8916-4e17-9d85-438f87081766)
+>點擊後能夠在此新增角色並進行刪除或更改管理
+
+![image](https://github.com/user-attachments/assets/2367d655-09cd-412f-919c-35ce3a92cd0a)
+
+
+
+
 
 
     
