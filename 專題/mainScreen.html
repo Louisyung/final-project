@@ -181,6 +181,7 @@
       document.querySelectorAll('input[type="checkbox"]').forEach(cb => cb.checked = false);
     }
 
+    // 修改 generateScript 函數，彈出一個輸入視窗
     function generateScript() {
       if (characters.length === 0) {
         alert("請先新增至少一個角色！");
@@ -190,8 +191,16 @@
         alert("請選擇或輸入劇情類型！");
         return;
       }
-      alert("開始生成劇本！\n角色數量：" + characters.length + "\n劇情類型：" + selectedStoryType);
-      // 在此處添加生成劇本的邏輯
+
+      // 彈出輸入視窗，讓使用者輸入劇情方向
+      const storyDirection = prompt("請輸入劇情方向：", "例如：角色如何相遇、冒險的起點等");
+
+      if (storyDirection) {
+        alert(`劇情方向已設定：${storyDirection}\n角色數量：${characters.length}\n劇情類型：${selectedStoryType}`);
+        // 在此處添加生成劇本的邏輯，使用 storyDirection
+      } else {
+        alert("未輸入劇情方向，請重新設定！");
+      }
     }
 
     // 添加雪花效果的 CSS 和 JavaScript
@@ -237,6 +246,36 @@
       }
     `;
     document.head.appendChild(style);
+
+    // 添加背景音樂
+    const audio = document.createElement('audio');
+    audio.src = 'https://s19.aconvert.com/convert/p3r68-cdx67/yndjm-q4iy2.mp3'; // 替換為您的音樂文件路徑
+    audio.loop = true; // 循環播放
+    audio.volume = 0.7; // 音量設置為 50%
+    document.body.appendChild(audio);
+    audio.play();
+
+    // 添加靜音按鈕
+    const muteButton = document.createElement('button');
+    muteButton.textContent = '🔇 靜音';
+    muteButton.style.position = 'fixed';
+    muteButton.style.bottom = '16px';
+    muteButton.style.left = '16px';
+    muteButton.style.padding = '10px 20px';
+    muteButton.style.backgroundColor = '#4CAF50';
+    muteButton.style.color = 'white';
+    muteButton.style.border = 'none';
+    muteButton.style.borderRadius = '5px';
+    muteButton.style.cursor = 'pointer';
+    muteButton.style.fontSize = '16px';
+    document.body.appendChild(muteButton);
+
+    let isMuted = false;
+    muteButton.addEventListener('click', () => {
+      isMuted = !isMuted;
+      audio.muted = isMuted;
+      muteButton.textContent = isMuted ? '🔊 取消靜音' : '🔇 靜音';
+    });
   </script>
 
 </body>
