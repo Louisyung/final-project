@@ -53,6 +53,13 @@
 >點擊後能夠在此新增角色並進行刪除或更改管理
 
 ![image](https://github.com/user-attachments/assets/2367d655-09cd-412f-919c-35ce3a92cd0a)
+>當設定完角色及個性後，彈出劇情提式的視窗(可輸入)
+
+![image](https://github.com/user-attachments/assets/88fec569-2a85-4497-8bd9-c1c47a56351e)
+>確認完後會列出這次劇本會有的角色及一些相關提式訊息，AI就會開始幫你生成劇本啦!
+
+![image](https://github.com/user-attachments/assets/5e151385-1499-4546-bb1e-c895d82f3818)
+
 
 
 
