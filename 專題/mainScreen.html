@@ -193,6 +193,50 @@
       alert("開始生成劇本！\n角色數量：" + characters.length + "\n劇情類型：" + selectedStoryType);
       // 在此處添加生成劇本的邏輯
     }
+
+    // 添加雪花效果的 CSS 和 JavaScript
+    const snowflakeContainer = document.createElement('div');
+    snowflakeContainer.style.position = 'fixed';
+    snowflakeContainer.style.top = '0';
+    snowflakeContainer.style.left = '0';
+    snowflakeContainer.style.width = '100%';
+    snowflakeContainer.style.height = '100%';
+    snowflakeContainer.style.pointerEvents = 'none';
+    snowflakeContainer.style.overflow = 'hidden';
+    document.body.appendChild(snowflakeContainer);
+
+    function createSnowflake() {
+      const snowflake = document.createElement('div');
+      snowflake.textContent = '❄';
+      snowflake.style.position = 'absolute';
+      snowflake.style.color = 'white';
+      snowflake.style.fontSize = Math.random() * 10 + 10 + 'px';
+      snowflake.style.top = '-10px';
+      snowflake.style.left = Math.random() * window.innerWidth + 'px';
+      snowflake.style.opacity = Math.random();
+      snowflake.style.animation = `fall ${Math.random() * 3 + 2}s linear`; // 隨機下落時間
+
+      snowflakeContainer.appendChild(snowflake);
+
+      // 移除雪花
+      snowflake.addEventListener('animationend', () => {
+        snowflakeContainer.removeChild(snowflake);
+      });
+    }
+
+    // 定期生成雪花
+    setInterval(createSnowflake, 200);
+
+    // 添加 CSS 動畫
+    const style = document.createElement('style');
+    style.textContent = `
+      @keyframes fall {
+        to {
+          transform: translateY(100vh);
+        }
+      }
+    `;
+    document.head.appendChild(style);
   </script>
 
 </body>
