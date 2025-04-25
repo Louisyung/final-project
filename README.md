@@ -59,6 +59,13 @@
 >確認完後會列出這次劇本會有的角色及一些相關提式訊息，AI就會開始幫你生成劇本啦!
 
 ![image](https://github.com/user-attachments/assets/5e151385-1499-4546-bb1e-c895d82f3818)
+>AI正在生成劇本
+
+![image](https://github.com/user-attachments/assets/7536bb97-7311-486d-95dc-84192cfaa134)
+>看到這個提示框最後就大功告成啦
+
+![image](https://github.com/user-attachments/assets/b83dcda4-1608-49ff-b9d3-a2e2569eb001)
+
 
 
 
