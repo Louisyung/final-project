@@ -33,7 +33,7 @@ def login():
         username = data.get('username')
         password = data.get('password')
         if username in users and users[username] == password:
-            return jsonify(message="登入成功")
+            return jsonify(message="登入成功", redirect="/mainScreen")
         else:
             return jsonify(message="帳號或密碼錯誤"), 401
     # GET 請求時回傳登入頁面
@@ -56,6 +56,10 @@ def register():
         return jsonify(message="註冊成功")
     # GET 請求時回傳註冊頁面
     return render_template('register.html')
+
+@app.route('/mainScreen')
+def main_screen():
+    return render_template('mainScreen.html')
 
 if __name__ == '__main__':
     app.run(port=3000)

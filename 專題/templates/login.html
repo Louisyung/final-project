@@ -51,8 +51,7 @@
                 if (response.ok) {
                     document.getElementById('message').classList.remove('text-red-400');
                     document.getElementById('message').classList.add('text-green-400');
-                    // 這裡可以加上跳轉頁面
-                    // window.location.href = "/main";
+                    window.location.href = data.redirect; // 跳轉到主
                 } else {
                     document.getElementById('message').classList.remove('text-green-400');
                     document.getElementById('message').classList.add('text-red-400');

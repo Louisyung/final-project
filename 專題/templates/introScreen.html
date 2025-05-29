@@ -17,10 +17,18 @@
     }
     .container {
       background: #333;
-      padding: 2em 3em;
-      border-radius: 16px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+      padding: 3em 5em; /* 放大內距 */
+      border-radius: 24px; /* 稍微放大圓角 */
+      box-shadow: 0 4px 24px rgba(0,0,0,0.35);
       text-align: center;
+      min-width: 420px;   /* 最小寬度放大 */
+      min-height: 420px;  /* 最小高度放大 */
+      max-width: 90vw;
+      max-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; /* 讓內容和按鈕之間有更多空間 */
+      gap: 1.5em; /* 增加內容之間的間距 */
     }
     .dropdown {
       margin: 1.5em 0;
@@ -43,20 +51,27 @@
 <body>
   <div class="container">
     <h1>歡迎來到電影AI小助手</h1>
-    <div class="dropdown" style="height: 4.5em; overflow-y: auto; background: #222; border-radius: 8px; padding: 0.5em;">
-        <ul style="list-style: none; padding: 0; margin: 0;">
-            <li>你可以使用本系統跟電影專家小高聊天，他會給你一些可靠的建議的</li>
-            <li>你可以查詢電影劇情、演員、上映時間等</li>
-            <li>她也可以將之前討論的電影整理成表格方便你比較</li>
-            <li>(還有小高通常會對比較經典的電影產生印象喔，如果是要找最新的電影需要自行找出比較)</li>
-            <li>最後在你體驗之前請先進行登入吧</li>
-            <li style="text-align:center; margin-top:0.5em;">
-                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" style="display:inline-block;">
-                    <path d="M16 6v20M16 26l-8-8M16 26l8-8" stroke="#4f8cff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </li>
-        </ul>
-    </div>
+    <div class="dropdown" style="height: 18em; min-height: 200px; max-height: 50vh; overflow-y: auto; background: #222; border-radius: 8px; padding: 1.5em 1em; display: flex;">
+      <ul style="list-style: none; padding: 0; margin: 0; width: 100%; display: flex; flex-direction: column; gap: 1em; justify-content: flex-start;">
+          <li>在這個系統中，你可以跟名為小高的電影小助手聊聊，他肯定會給你一些好的建議</li>
+          <li>但你跟他聊天時有以下幾個要注意的事項，如下</li>
+          <li style="font-size: 30px;">使用說明</li>
+          <li style="color :red">1. 小高的知識截止於2023年10月，所以他對於2023年10月之後的電影不會有任何資訊</li>
+          <li style="color :red">2. 小高對於電影的知識主要來自於經典電影，所以如果你要找最新的電影資訊，可能需要自己查找</li>
+          <li style="color :red">3. 當然，你如果有知道最新電影的資訊，歡迎跟他講讓他幫你整理一些東西</li>
+          <br>
+          <li style="font-size: 30px;">你可以讓小高幫你做以下的事</li>
+          <li style="color :red">1. 你可以查詢電影劇情、演員、上映時間等相關資訊</li>
+          <li style="color :red">2. 你也可以讓小高幫你將之前討論的電影整理成表格方便你比較</li>
+          <li>(PS.小高通常會對比較經典的電影產生印象喔，如果是要找最新的電影需要自行找出比較)</li>
+          <li>最後在你體驗之前請先進行登入吧</li>
+          <li style="text-align:center; margin-top:0.5em;">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" style="display:inline-block;">
+                  <path d="M16 6v20M16 26l-8-8M16 26l8-8" stroke="#4f8cff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+          </li>
+      </ul>
+  </div>
     <button onclick="location.href='/login'">點我進入登入介面</button>
   </div>
 </body>
