@@ -24,9 +24,16 @@
                 class="w-full bg-teal-500 hover:bg-teal-400 text-white font-bold py-2 px-4 rounded-lg transition">
                 登入
             </button>
+            <!-- 新增註冊按鈕 -->
+            <button type="button"
+                class="w-full mt-2 bg-gray-600 hover:bg-gray-500 text-white font-bold py-2 px-4 rounded-lg transition"
+                onclick="window.location.href='/register'">
+                註冊
+            </button>
         </form>
         <div id="message" class="mt-4 text-center text-red-400"></div>
     </div>
+
     <script>
         document.getElementById('loginForm').addEventListener('submit', async function(event) {
             event.preventDefault();
@@ -57,5 +64,6 @@
             }
         });
     </script>
+
 </body>
 </html>

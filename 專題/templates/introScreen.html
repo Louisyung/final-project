@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>專題開始介面</title>
+  <style>
+    body {
+      background: #222;
+      color: #fff;
+      font-family: 'Microsoft JhengHei', Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .container {
+      background: #333;
+      padding: 2em 3em;
+      border-radius: 16px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+      text-align: center;
+    }
+    .dropdown {
+      margin: 1.5em 0;
+    }
+    button {
+      background: #4f8cff;
+      color: #fff;
+      border: none;
+      padding: 0.8em 2em;
+      border-radius: 8px;
+      font-size: 1.1em;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    button:hover {
+      background: #2563eb;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>歡迎來到電影AI小助手</h1>
+    <div class="dropdown" style="height: 4.5em; overflow-y: auto; background: #222; border-radius: 8px; padding: 0.5em;">
+        <ul style="list-style: none; padding: 0; margin: 0;">
+            <li>你可以使用本系統跟電影專家小高聊天，他會給你一些可靠的建議的</li>
+            <li>你可以查詢電影劇情、演員、上映時間等</li>
+            <li>她也可以將之前討論的電影整理成表格方便你比較</li>
+            <li>(還有小高通常會對比較經典的電影產生印象喔，如果是要找最新的電影需要自行找出比較)</li>
+            <li>最後在你體驗之前請先進行登入吧</li>
+            <li style="text-align:center; margin-top:0.5em;">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" style="display:inline-block;">
+                    <path d="M16 6v20M16 26l-8-8M16 26l8-8" stroke="#4f8cff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </li>
+        </ul>
+    </div>
+    <button onclick="location.href='/login'">點我進入登入介面</button>
+  </div>
+</body>
+</html>
