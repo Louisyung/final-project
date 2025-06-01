@@ -51,7 +51,6 @@
                 if (response.ok) {
                     document.getElementById('message').classList.remove('text-red-400');
                     document.getElementById('message').classList.add('text-green-400');
-                    // 彈出視窗提示註冊成功，按下確認後跳轉到登入頁
                     alert('註冊成功！請使用新帳號登入。');
                     window.location.href = "/login";
                 } else {

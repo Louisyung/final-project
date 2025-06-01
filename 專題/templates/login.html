@@ -51,7 +51,7 @@
                 if (response.ok) {
                     document.getElementById('message').classList.remove('text-red-400');
                     document.getElementById('message').classList.add('text-green-400');
-                    window.location.href = data.redirect; // 跳轉到主
+                    window.location.href = `/mainScreen?username=${username}`;
                 } else {
                     document.getElementById('message').classList.remove('text-green-400');
                     document.getElementById('message').classList.add('text-red-400');

@@ -57,9 +57,19 @@ def register():
     # GET 請求時回傳註冊頁面
     return render_template('register.html')
 
-@app.route('/mainScreen')
+@app.route('/mainScreen', methods=['GET'])
 def main_screen():
-    return render_template('mainScreen.html')
+    username = request.args.get('username')  # 從查詢參數獲取使用者名稱
+    users = load_users()
+    if username in users:
+        user_info = {"username": username}
+    else:
+        user_info = {"username": "訪客"}  # 如果未找到，顯示為訪客
+    return render_template('mainScreen.html', user_info=user_info)
+
+@app.route('/robot', methods=['GET'])
+def robot():
+    return render_template('chatBot.html')
 
 if __name__ == '__main__':
     app.run(port=3000)

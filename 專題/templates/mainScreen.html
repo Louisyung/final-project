@@ -5,8 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>電影推薦主畫面</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .user-info {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            color: #fff;
+            font-size: 0.9rem;
+            text-align: left;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .robot-button {
+            position: fixed;
+            bottom: 1.5rem;
+            right: 1.5rem;
+            background: linear-gradient(to right, #4f8cff, #2563eb);
+            color: #fff;
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s ease, background 0.3s ease;
+        }
+        .robot-button:hover {
+            transform: scale(1.05);
+            background: linear-gradient(to right, #2563eb, #1c64f2);
+        }
+    </style>
 </head>
-<body class="bg-gradient-to-br from-gray-800 to-gray-900 min-h-screen flex items-center justify-center">
+<body class="bg-gradient-to-br from-gray-800 to-gray-900 min-h-screen flex items-center justify-center relative">
+    <!-- 使用者資訊 -->
+    <div class="user-info">
+        <p>使用者：{{ user_info.username }}</p>
+    </div>
+
     <div class="bg-gray-800 p-8 rounded-2xl shadow-xl w-full max-w-5xl">
         <h1 class="text-4xl font-bold mb-6 text-center text-white">為你推薦電影</h1>
         <p class="text-gray-300 text-center mb-10">根據你的喜好，發現更多精彩電影！</p>
@@ -35,8 +72,10 @@
                     <p class="text-gray-400 text-xs">導演：Christopher Nolan</p>
                 </div>
             </div>
-            <!-- 你可以繼續新增更多推薦電影卡片 -->
         </div>
     </div>
+
+    <!-- 右下角按鈕 -->
+    <button class="robot-button" onclick="location.href='/robot'">去跟電影小達人小高聊聊吧 >></button>
 </body>
 </html>
