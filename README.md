@@ -60,6 +60,8 @@
 ![image](https://github.com/user-attachments/assets/63435ef1-455d-475c-838a-34eb09d2274c)
 >如果你有任何疑問，可以使用右下角網站導覽-大高進行Q&A疑惑解答
 
+![image](https://github.com/user-attachments/assets/1c2f6d5b-4b67-4a30-85c3-59a3e8e50252)
+>點擊右下角的"去跟電影小達人小高聊聊吧>>"即可開始與你的專屬電影小助手小高聊天了喔
 
 
 
