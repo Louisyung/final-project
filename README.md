@@ -53,7 +53,12 @@
 ![image](https://github.com/user-attachments/assets/cb43395a-c261-4bfa-a975-5b6bcf681f50)
 >點擊按鈕後進入登入介面👆
 
+>>登入後畫面
+![image](https://github.com/user-attachments/assets/e88787a2-2143-444f-97f0-81d473c27430)
+>登入後進入主畫面囉👆
 
+![image](https://github.com/user-attachments/assets/63435ef1-455d-475c-838a-34eb09d2274c)
+>如果你有任何疑問，可以使用右下角網站導覽-大高進行Q&A疑惑解答
 
 
 
